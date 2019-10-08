@@ -14,6 +14,10 @@
 		} else {
 			document.write('Reprovado')
 		}
+
+		var resultado = (nota >= media && faltas <= faltasMaximas) ? 'Aprovado' : 'Reprovado'
+
+		document.write(resultado)
 	</script>
 </head>
 <body>
