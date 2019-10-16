@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escopo de variáveis</title>
+    <script>
+        //JS possui 3 escopos: global, função e bloco
+        var serie = 'friends'
+
+        if (true) {
+            var serie2 = 'game of thrones'
+            document.write(serie)
+            document.write('<br / >')
+        }
+
+        document.write(serie2)
+        document.write('<br / >')
+
+        function x() {
+            var serie3 = 'the walking dead'
+            document.write(serie)
+            document.write('<br / >')
+            document.write(serie2)
+            document.write('<br / >')
+            document.write(serie3)
+            document.write('<br / >')
+        }
+        
+        x()
+
+        document.write(serie3)
+        document.write('<br / >')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
