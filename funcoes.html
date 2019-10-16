@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções JavaScript</title>
+    <script>
+        function calcularAreaTerreno(largura, comprimento) {
+            //lógica (pode incluir todos os artifícios da linguagem)
+            //pode ser uma função void ou conter um retorno (return)
+            var area = largura * comprimento;
+            //document.write('O terreno possui área de ' + area + 'm²')
+            //Fazendo assim, se você precisar usar a função em vários contextos, poderá ter problemas
+            //Usando um return, você pode trabalhar a informação de diversas maneiras
+            return area;
+        }
+
+        var largura = prompt('Digite a largura do terreno em metros:')
+        var comprimento = prompt('Digite o comprimento do terreno em metros: ')
+
+        largura = parseFloat(largura)
+        comprimento = parseFloat(comprimento)
+
+        document.write('O terreno possui área de ' + calcularAreaTerreno(largura, comprimento) + 'm²')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
