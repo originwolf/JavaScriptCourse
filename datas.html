@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções de Data</title>
+    <script>
+        var data = new Date()
+
+        document.write('Dia do mês (1~31): ' + data.getDate())
+        document.write('<br />')
+        document.write('Dia da semana (0~6): (adicionar 1, pois começa do 0) ' + data.getDay())
+        document.write('<br />')
+        document.write('Mês (numérico): (adicionar 1, pois começa do 0) ' + data.getMonth())
+        document.write('<br />')
+        document.write('Ano: (sem pegadinha): ' + data.getFullYear())
+        document.write('<br />')
+        //para imprimir data cheia sem necessidade de tratar o mês previamente, encapsule o mesmo com uma adição
+        document.write('Data cheia: ' + data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+
+        //adicionar /remover dias
+        document.write('<br /><br /><br /><br />')
+        document.write("Adicionar ou remover dias: <br />")
+        document.write(data.toString())
+        document.write('<br />')
+        data.setDate(data.getDate() - 4) // quantos dias vc quer adicionar/remover? o JS tratará o mês/ano como preciso
+        document.write(data.toString())
+
+        //adicionar /remover meses
+        document.write('<br /><br />')
+        document.write("Adicionar ou remover meses: <br />")
+        document.write(data.toString())
+        document.write('<br />')
+        data.setMonth(data.getMonth() + 2) // quantos meses vc quer adicionar/remover? o JS tratará o mês/ano como preciso
+        document.write(data.toString())
+
+        //adicionar /remover anos
+        document.write('<br /><br />')
+        document.write("Adicionar ou remover anos: <br />")
+        document.write(data.toString())
+        document.write('<br />')
+        data.setFullYear(data.getFullYear() - 1) // quantos anos vc quer adicionar/remover? o JS tratará o mês/ano como preciso
+        document.write(data.toString())
+
+        //cronômetro
+        document.write('<br /><br /><br /><br />')
+        document.write("Cronômetro: <br />")
+        var data1 = new Date(2017, 0, 15) //Janeiro seria o mês 0
+        var data2 = new Date(2019, 9, 17)
+        //horas, minutos, segundos e milisegundos podem ser omitidos.
+        document.write(data1.toString())
+        document.write('<hr />')
+        document.write(data2.toString())
+
+        //converter datas para algo que possamos calcular
+        document.write('<br /><br /><br />')
+        document.write('getTime apresentará a data em milisegundos desde 01/01/1970')
+        document.write('<br /> Data1: ')
+        document.write(data1.getTime())
+        document.write('<hr /> Data2: ')
+        document.write(data2.getTime())
+
+        //encontrar a diferença em ms entre data1 e data2
+        document.write('<br /><br />')
+        document.write('Diferença em ms: <br />')
+        document.write(data2.getTime() - data1.getTime())
+        var diferencaDatas = data2.getTime() - data1.getTime()
+
+        //1 dia tem 24h, cada hora tem 60 minutos,
+        //1 minuto tem 60 segundos, cada segundo tem 1000 milissegundos
+        //Quantos ms existem em um dia?
+        document.write('<br />Ou ' + Math.ceil((((diferencaDatas/1000)/60)/60)/24) + ' Dias.')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
