@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividades 3</title>
+    <script>
+        var numero1 = prompt('Digite um número:')
+        var operacao = prompt('Digite uma operação: (soma, subtração, etc..)')
+        var numero2 = prompt('Digite outro número:')
+
+        operacao = operacao.toLowerCase()
+        numero1 = parseFloat(numero1)
+        numero2 = parseFloat(numero2)
+
+        
+        function calcular(numero1, numero2, operacao){
+            if (operacao === 'soma') {
+                return numero1 + numero2
+            } else if (operacao === 'subtração') {
+                return numero1 - numero2
+            } else if (operacao === 'divisão') {
+                return numero1 / numero2
+            } else if (operacao === 'multiplicação') {
+                return numero1 * numero2
+            }
+        }
+
+        var resultado = calcular(numero1, numero2, operacao)
+
+        document.write('O resultado é: ' + resultado)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
