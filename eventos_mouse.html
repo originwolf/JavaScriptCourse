@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos do Mouse</title>
+    <script>
+        function executaAcao(){
+            alert('Teste function')
+        }
+
+        function executaAcao2(){
+            alert('Teste function 2')
+        }
+    </script>
+    <style>
+        .left {
+            float: left;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Eventos JS devem ser chamados aonde eles serão requisitados -->
+    <!-- onclick executa a ação ao clicar em algo -->
+    <div onclick="executaAcao()" class="left" style="background: #aaa; height: 150px; width: 150px">
+        click
+    </div>
+    <!-- endblclick executa a ação ao clicar duas vezes em algo -->
+    <div ondblclick="executaAcao()" class="left" style="background: #bbb; height: 150px; width: 150px">
+        double click
+    </div>
+    <!-- onmouseup executa a ação ao soltar o click, on release -->
+    <div onmouseup="executaAcao()" class="left" style="background: #ccc; height: 150px; width: 150px">
+        mouse up (on release)
+    </div>
+    <!-- onmouseover executa a ação ao passar o mouse por cima de algo -->
+    <div onmouseover="executaAcao()" class="left" style="background: #ddd; height: 150px; width: 150px">
+        mouse over
+    </div>
+    <!-- onmouseout executa a ação ao tirar o mouse de algo -->
+    <div onmouseout="executaAcao()" class="left" style="background: #eee; height: 150px; width: 150px">
+        mouse out
+    </div>
+    <!-- É possível executar varias ações, combinando-as -->
+    <div onmouseover="executaAcao()" onmouseout="executaAcao2()" class="left" style="background: #fff; height: 150px; width: 150px">
+        mouse over
+        mouse out
+    </div>
+</body>
+</html>
