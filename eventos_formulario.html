@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de Formulário</title>
+    <script>
+        function escrever1(){
+            console.log('Teste onfocus')
+        }
+        function escrever2(){
+            console.log('Teste onblur')
+        }
+    </script>
+</head>
+<body>
+    <!-- Quando o elemento recebe o foco -->
+    <input onfocus="escrever1()" type="text" placeholder="onfocus">
+    <!-- Quando o elemento perde o foco -->
+    <input onblur="escrever2()" type="text" placeholder="onblur">
+
+    <select onchange="console.log('Estado foi modificado')">
+        <option>---onchange---</option>
+        <option value="1">---Primeira---</option>
+        <option value="2">---Segunda---</option>
+    </select>
+</body>
+</html>
