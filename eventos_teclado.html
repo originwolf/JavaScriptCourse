@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos do Teclado</title>
+    <script>
+        function acao1() {
+            if (document.activeElement = '#input1'){
+                alert('onkeydown disparado')
+            }           
+        }
+
+        function acao2() {
+            if (document.activeElement = '#input2'){
+                alert('onkeypress disparado')
+            }            
+        }
+
+        function acao3() {
+            if (document.activeElement = '#input3'){
+                alert('onkeyup disparado')
+            }             
+        }
+    </script>
+</head>
+<body>
+
+    <!-- onkeydown dispara um evento ao se apertar uma tecla -->
+    <input id="input1" onkeydown="acao1()" type="text" placeholder="onkeydown">
+    <!-- onkeypress dispara um evento ao se manter uma tecla de caracter pressionada -->
+    <input id="input2" onkeypress="acao2()" type="text" placeholder="onkeypress">
+    <!-- onkeyup executa uma ação ao soltar uma tecla -->
+    <input id="input3" onkeyup="acao3()" type="text" placeholder="onkeyup">
+
+</body>
+</html>
