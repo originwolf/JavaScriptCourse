@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+
+    <script>
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionar() {
+            if (document.getElementById("texto").value == "") {
+                alert("Informe um valor válido")
+            } else {
+                var objeto = document.getElementById("texto").value
+                if (objetos.indexOf(objeto) >= 0) {
+                    alert("Objeto já foi adicionado.")
+                } else {
+                    objetos.push(objeto)
+                }
+            }
+            console.log(objetos)
+            document.getElementById("texto").value = ""
+        }
+
+        function ordenar() {
+            objetos.sort()
+            console.log(objetos)
+        }
+    </script>
+
+</head>
+<body>
+
+    <form action="#">
+        <input type="text" name="texto" id="texto">
+        <button id="add" onclick="adicionar()")>Adicionar</button>
+        <button id="order" onclick="ordenar()">Ordenar</button>
+    </form>
+            
+</body>
+</html>
